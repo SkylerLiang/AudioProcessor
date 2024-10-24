@@ -77,7 +77,7 @@ I (C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp
 I (C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp\filtering_functions.h)(0x66A6B132)
 I (C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp\quaternion_math_functions.h)(0x66A6B132)
 I (C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp\window_functions.h)(0x66A6B132)
-I (.\TLV320AIC\TLV320AIC.h)(0x671A53BD)
+I (.\TLV320AIC\TLV320AIC.h)(0x671A5FDB)
 F (../Core/Src/gpio.c)(0x671A1F2D)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I .\TLV320AIC-I.\RTE\_AudioProcessor-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\PrivateInclude-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx -D__CC_ARM-o audioprocessor\gpio.o --omf_browse audioprocessor\gpio.crf --depend audioprocessor\gpio.d)
 I (../Core/Inc/gpio.h)(0x671A1F2D)
 I (../Core/Inc/main.h)(0x671A1F30)
@@ -1854,8 +1854,8 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x6621CBA0)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x6621CBA0)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6621CBA1)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6621CBA1)
-F (.\TLV320AIC\TLV320AIC.c)(0x671A53BD)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I .\TLV320AIC-I.\RTE\_AudioProcessor-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\PrivateInclude-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx -D__CC_ARM-o audioprocessor\tlv320aic.o --omf_browse audioprocessor\tlv320aic.crf --depend audioprocessor\tlv320aic.d)
-I (TLV320AIC\TLV320AIC.h)(0x671A53BD)
+F (.\TLV320AIC\TLV320AIC.c)(0x671A7110)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I .\TLV320AIC-I.\RTE\_AudioProcessor-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\PrivateInclude-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx -D__CC_ARM-o audioprocessor\tlv320aic.o --omf_browse audioprocessor\tlv320aic.crf --depend audioprocessor\tlv320aic.d)
+I (TLV320AIC\TLV320AIC.h)(0x671A5FDB)
 I (../Core/Inc/main.h)(0x671A1F30)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x6621CBA0)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x671A1F30)
@@ -1895,7 +1895,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x6621CBA0)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h)(0x6621CBA0)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h)(0x6621CBA0)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h)(0x6621CBA0)
-F (.\TLV320AIC\TLV320AIC.h)(0x671A53BD)()
+F (.\TLV320AIC\TLV320AIC.h)(0x671A5FDB)()
 F (C:/Users/SkylerLiang/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.16.2/Source/BasicMathFunctions/BasicMathFunctions.c)(0x66A6B132)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../USB_DEVICE/App -I ../USB_DEVICE/Target -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I .\TLV320AIC-I.\RTE\_AudioProcessor-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\PrivateInclude-IC:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx -D__CC_ARM-o audioprocessor\basicmathfunctions.o --omf_browse audioprocessor\basicmathfunctions.crf --depend audioprocessor\basicmathfunctions.d)
 I (C:/Users/SkylerLiang/AppData/Local/Arm/Packs/ARM/CMSIS-DSP/1.16.2/Source/BasicMathFunctions/arm_abs_f32.c)(0x66A6B132)
 I (C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp\basic_math_functions.h)(0x66A6B132)

@@ -46,6 +46,8 @@
 "audioprocessor\usbd_ioreq.o"
 "audioprocessor\usbd_cdc.o"
 "audioprocessor\tlv320aic.o"
+"audioprocessor\uart_screen.o"
+"audioprocessor\usb_debug.o"
 "audioprocessor\basicmathfunctions.o"
 "audioprocessor\basicmathfunctionsf16.o"
 "audioprocessor\bayesfunctions.o"

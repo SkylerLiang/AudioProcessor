@@ -31,6 +31,8 @@
 /* USER CODE BEGIN Includes */
 #include "arm_math.h"
 #include "TLV320AIC.h"
+#include "uart_screen.h"
+#include "usb_debug.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -107,6 +109,9 @@ int main(void)
   MX_I2C2_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  Screen_Init();
+  Screen_Send_Command("Hello, %d\n", 123);
+  USB_Send_Command("Hello, %d\n", 123);
 
   /* USER CODE END 2 */
 

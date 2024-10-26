@@ -76,3 +76,11 @@ audioprocessor\main.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DS
 audioprocessor\main.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp/quaternion_math_functions.h
 audioprocessor\main.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp/window_functions.h
 audioprocessor\main.o: .\TLV320AIC\TLV320AIC.h
+audioprocessor\main.o: .\UART_SCREEN\uart_screen.h
+audioprocessor\main.o: .\USB_DEBUG\usb_debug.h
+audioprocessor\main.o: ../USB_DEVICE/App/usbd_cdc_if.h
+audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h

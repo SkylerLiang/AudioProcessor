@@ -315,7 +315,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>2</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H743xx,__CC_ARM</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../USB_DEVICE/App;../USB_DEVICE/Target;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;.\TLV320AIC</IncludePath>
+              <IncludePath>../Core/Inc;../USB_DEVICE/App;../USB_DEVICE/Target;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;.\TLV320AIC;.\UART_SCREEN;.\USB_DEBUG</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -659,6 +659,36 @@
               <FileName>TLV320AIC.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\TLV320AIC\TLV320AIC.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UART_SCREEN</GroupName>
+          <Files>
+            <File>
+              <FileName>uart_screen.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UART_SCREEN\uart_screen.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart_screen.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\UART_SCREEN\uart_screen.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UBS_DEBUG</GroupName>
+          <Files>
+            <File>
+              <FileName>usb_debug.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USB_DEBUG\usb_debug.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_debug.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\USB_DEBUG\usb_debug.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -33,6 +33,7 @@
 #include "TLV320AIC.h"
 #include "uart_screen.h"
 #include "usb_debug.h"
+#include "mic.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -110,6 +111,8 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   Screen_Init();
+  Mic_Init(&mics[0], &hi2s1, 48000, 24);
+  Mic_Init(&mics[1], &hi2s2, 48000, 24);
   Screen_Send_Command("Hello, %d\n", 123);
   USB_Send_Command("Hello, %d\n", 123);
 

@@ -48,6 +48,8 @@
 "audioprocessor\tlv320aic.o"
 "audioprocessor\uart_screen.o"
 "audioprocessor\usb_debug.o"
+"audioprocessor\audio_process.o"
+"audioprocessor\mic.o"
 "audioprocessor\basicmathfunctions.o"
 "audioprocessor\basicmathfunctionsf16.o"
 "audioprocessor\bayesfunctions.o"

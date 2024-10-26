@@ -3,14 +3,14 @@
 #include <stdarg.h>
 #include <string.h>
 
-char screenTxBuffer[256];
-char screenRxBuffer[256];
+char screenTxBuffer[SCREEN_BUFFER_SIZE];
+char screenRxBuffer[SCREEN_BUFFER_SIZE];
 
 HAL_StatusTypeDef Screen_Init(void)
 {
 	HAL_StatusTypeDef status;
 	
-	status = HAL_UARTEx_ReceiveToIdle_IT(&SCREEN_UART, (uint8_t *)screenRxBuffer, 255);
+	status = HAL_UARTEx_ReceiveToIdle_IT(&SCREEN_UART, (uint8_t *)screenRxBuffer, SCREEN_BUFFER_SIZE);
 	
 	return status;
 }
@@ -22,7 +22,7 @@ HAL_StatusTypeDef Screen_Send_Command(const char *format, ...)
 	
 	HAL_StatusTypeDef status;
 	
-	memset(screenTxBuffer, 0, 256);
+	memset(screenTxBuffer, 0, SCREEN_BUFFER_SIZE);
 	vsprintf(screenTxBuffer, format, args);
 	
 	uint8_t strLen = strlen(screenTxBuffer);
@@ -49,6 +49,6 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	if (huart->Instance == SCREEN_UART.Instance)
 	{
 		Screen_Decode(screenRxBuffer, Size);
-		HAL_UARTEx_ReceiveToIdle_IT(&SCREEN_UART, (uint8_t *)screenRxBuffer, 255);
+		HAL_UARTEx_ReceiveToIdle_IT(&SCREEN_UART, (uint8_t *)screenRxBuffer, SCREEN_BUFFER_SIZE);
 	}
 }

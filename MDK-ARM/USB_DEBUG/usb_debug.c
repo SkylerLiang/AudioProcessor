@@ -1,8 +1,8 @@
 #include "usb_debug.h"
 #include <stdarg.h>
 
-char usbTxBuffer[256];
-char usbRxBuffer[256];
+char usbTxBuffer[USB_BUFFER_SIZE];
+char usbRxBuffer[USB_BUFFER_SIZE];
 
 /**
   * @retval 0 if all operations are OK
@@ -14,7 +14,7 @@ uint8_t USB_Send_Command(const char *format, ...)
 	
 	uint8_t status;
 	
-	memset(usbTxBuffer, 0, 256);
+	memset(usbTxBuffer, 0, USB_BUFFER_SIZE);
 	vsprintf(usbTxBuffer, format, args);
 	
 	uint8_t strLen = strlen(usbTxBuffer);
@@ -25,9 +25,13 @@ uint8_t USB_Send_Command(const char *format, ...)
 	
 	return status;
 }
+
 void USB_Decode(uint8_t *data, uint16_t len)
 {
-	memcpy(usbRxBuffer, data, len);
-	
-	// process...
+	if (len < USB_BUFFER_SIZE)
+	{
+		memcpy(usbRxBuffer, data, len);
+		
+		// process...
+	}
 }

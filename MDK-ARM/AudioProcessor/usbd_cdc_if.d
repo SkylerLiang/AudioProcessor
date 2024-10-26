@@ -50,4 +50,4 @@ audioprocessor\usbd_cdc_if.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_
 audioprocessor\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 audioprocessor\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 audioprocessor\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
-audioprocessor\usbd_cdc_if.o: .\USB_DEBUG\usb_debug.h
+audioprocessor\usbd_cdc_if.o: ./USB_DEBUG/usb_debug.h

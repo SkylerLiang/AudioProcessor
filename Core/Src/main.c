@@ -109,6 +109,8 @@ int main(void)
   MX_I2C1_Init();
   MX_I2C2_Init();
   MX_USART1_UART_Init();
+  MX_I2C3_Init();
+  MX_I2S3_Init();
   /* USER CODE BEGIN 2 */
   Screen_Init();
   Mic_Init(&mics[0], &hi2s1, 48000, 24);

@@ -4,7 +4,7 @@
 #include "main.h"
 #include "i2s.h"
 
-#define RAW_RECV_BUFFER_LEN 1024
+#define RAW_RECV_BUFFER_LEN 4096
 #define SAMPLE_DEPTH 24
 typedef uint32_t raw_data_type_t;
 

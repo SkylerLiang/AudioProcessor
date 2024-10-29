@@ -44,6 +44,15 @@ audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_usb.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pcd_ex.h
 audioprocessor\main.o: ../Core/Inc/dma.h
+audioprocessor\main.o: ../FATFS/App/fatfs.h
+audioprocessor\main.o: ../Middlewares/Third_Party/FatFs/src/ff.h
+audioprocessor\main.o: ../Middlewares/Third_Party/FatFs/src/integer.h
+audioprocessor\main.o: ../FATFS/Target/ffconf.h
+audioprocessor\main.o: ../FATFS/Target/bsp_driver_sd.h
+audioprocessor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+audioprocessor\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
+audioprocessor\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
+audioprocessor\main.o: ../FATFS/Target/sd_diskio.h
 audioprocessor\main.o: ../Core/Inc/i2s.h
 audioprocessor\main.o: ../Core/Inc/memorymap.h
 audioprocessor\main.o: ../Core/Inc/quadspi.h
@@ -53,7 +62,6 @@ audioprocessor\main.o: ../USB_DEVICE/App/usb_device.h
 audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
 audioprocessor\main.o: ../USB_DEVICE/Target/usbd_conf.h
 audioprocessor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-audioprocessor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 audioprocessor\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 audioprocessor\main.o: ../Core/Inc/gpio.h
 audioprocessor\main.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\arm_math.h

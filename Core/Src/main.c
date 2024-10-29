@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
+#include "fatfs.h"
 #include "i2s.h"
 #include "memorymap.h"
 #include "quadspi.h"
@@ -109,7 +110,32 @@ int main(void)
   MX_USART1_UART_Init();
   MX_I2S3_Init();
   MX_SDMMC1_SD_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
+  HAL_Delay(5000);
+  FRESULT res = f_mount(&SDFatFS, "0:", 1);
+//  USB_Send_Command("FatFS init %s\n", (res == FR_OK ? "success" : "failed"));
+  
+//  if (res == FR_NO_FILESYSTEM)
+//  {
+//	  BYTE workBuffer[4096 * 2];
+//	  res = f_mkfs("0:", FM_EXFAT, 0, workBuffer, 4096 * 2);
+	  
+//  }
+  
+  if (res == FR_OK)
+  {
+	  FIL file;
+	  res = f_open(&file, "test1.txt", FA_CREATE_NEW | FA_WRITE);
+	  if (res == FR_OK)
+	  {
+		  UINT bw = 0;
+		  char str[] = "Hello, world!\n";
+		  f_write(&file, str, strlen(str), &bw);
+		  f_close(&file);
+	  }
+  }
+  
   Screen_Init();
   Mic_Init(&mics[0], &hi2s1, 48000, 24);
 //  Mic_Init(&mics[1], &hi2s2, 48000, 24);

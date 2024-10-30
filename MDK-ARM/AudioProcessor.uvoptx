@@ -162,9 +162,9 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>116</LineNumber>
+          <LineNumber>172</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134290164</Address>
+          <Address>134286370</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -173,30 +173,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AudioProcessor\../Core/Src/main.c\116</Expression>
+          <Expression>\\AudioProcessor\../Core/Src/main.c\172</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>28</LineNumber>
+          <LineNumber>118</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134259740</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\MIC\mic.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\AudioProcessor\MIC/mic.c\28</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>126</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134290176</Address>
+          <Address>134286268</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -205,7 +189,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>../Core/Src/main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\AudioProcessor\../Core/Src/main.c\126</Expression>
+          <Expression>\\AudioProcessor\../Core/Src/main.c\118</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -217,49 +201,122 @@
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[0]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[0],0x10</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[1]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[1],0x10</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[2],0x10</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[2],0x0A</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[3]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[3],0x0A</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[4092]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[4092],0x0A</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[4093]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[4093],0x0A</ItemText>
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[4094]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[4094],0x0A</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
           <WinNumber>1</WinNumber>
-          <ItemText>mics[0].rawRecvBuffer[4095]</ItemText>
+          <ItemText>mics[0].rawRecvBuffer[4095],0x10</ItemText>
         </Ww>
         <Ww>
           <count>9</count>
           <WinNumber>1</WinNumber>
           <ItemText>SDFatFS</ItemText>
         </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[4095],0x10</ItemText>
+        </Ww>
+        <Ww>
+          <count>11</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>L</ItemText>
+        </Ww>
+        <Ww>
+          <count>12</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>R</ItemText>
+        </Ww>
+        <Ww>
+          <count>13</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[0]</ItemText>
+        </Ww>
+        <Ww>
+          <count>14</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[1]</ItemText>
+        </Ww>
+        <Ww>
+          <count>15</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[2],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>16</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[3],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>17</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[4],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>18</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[5],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>19</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[31],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>20</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[63],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>21</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[64],0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>22</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>audio_buffer_mixed[66],0x0A</ItemText>
+        </Ww>
       </WatchWindow1>
+      <MemoryWindow1>
+        <Mm>
+          <WinNumber>1</WinNumber>
+          <SubType>0</SubType>
+          <ItemText>0x240043dc</ItemText>
+          <AccSizeX>0</AccSizeX>
+        </Mm>
+      </MemoryWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -1098,7 +1155,7 @@
 
   <Group>
     <GroupName>Mic</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1130,7 +1187,7 @@
 
   <Group>
     <GroupName>Application/User/FATFS/Target</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1162,7 +1219,7 @@
 
   <Group>
     <GroupName>Application/User/FATFS/App</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1182,7 +1239,7 @@
 
   <Group>
     <GroupName>Middlewares/FatFs</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1243,6 +1300,38 @@
       <bDave2>0</bDave2>
       <PathWithFileName>../Middlewares/Third_Party/FatFs/src/option/cc936.c</PathWithFileName>
       <FilenameWithoutPath>cc936.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>WAV_File</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>16</GroupNumber>
+      <FileNumber>69</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\WAV_FILE\wav_file.c</PathWithFileName>
+      <FilenameWithoutPath>wav_file.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>16</GroupNumber>
+      <FileNumber>70</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\WAV_FILE\wav_file.h</PathWithFileName>
+      <FilenameWithoutPath>wav_file.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

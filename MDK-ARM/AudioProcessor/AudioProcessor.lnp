@@ -62,6 +62,7 @@
 "audioprocessor\ff_gen_drv.o"
 "audioprocessor\syscall.o"
 "audioprocessor\cc936.o"
+"audioprocessor\wav_file.o"
 "audioprocessor\basicmathfunctions.o"
 "audioprocessor\basicmathfunctionsf16.o"
 "audioprocessor\bayesfunctions.o"

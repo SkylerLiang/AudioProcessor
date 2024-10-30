@@ -68,3 +68,5 @@ audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM
 audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp/filtering_functions.h
 audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp/quaternion_math_functions.h
 audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp/window_functions.h
+audioprocessor\audio_process.o: ./MIC/mic.h
+audioprocessor\audio_process.o: ../Core/Inc/i2s.h

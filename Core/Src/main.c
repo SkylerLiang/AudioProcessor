@@ -35,6 +35,8 @@
 #include "uart_screen.h"
 #include "usb_debug.h"
 #include "mic.h"
+#include "wav_file.h"
+#include "audio_process.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,7 +57,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint32_t counter = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,7 +115,8 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
   HAL_Delay(5000);
-  FRESULT res = f_mount(&SDFatFS, "0:", 1);
+  File_Init();
+  File_Wav_Create(&wavFile, 7);
 //  USB_Send_Command("FatFS init %s\n", (res == FR_OK ? "success" : "failed"));
   
 //  if (res == FR_NO_FILESYSTEM)
@@ -123,24 +126,24 @@ int main(void)
 	  
 //  }
   
-  if (res == FR_OK)
-  {
-	  FIL file;
-	  res = f_open(&file, "test1.txt", FA_CREATE_NEW | FA_WRITE);
-	  if (res == FR_OK)
-	  {
-		  UINT bw = 0;
-		  char str[] = "Hello, world!\n";
-		  f_write(&file, str, strlen(str), &bw);
-		  f_close(&file);
-	  }
-  }
+//  if (res == FR_OK)
+//  {
+//	  FIL file;
+//	  res = f_open(&file, "test1.txt", FA_CREATE_NEW | FA_WRITE);
+//	  if (res == FR_OK)
+//	  {
+//		  UINT bw = 0;
+//		  char str[] = "Hello, world!\n";
+//		  f_write(&file, str, strlen(str), &bw);
+//		  f_close(&file);
+//	  }
+//  }
   
   Screen_Init();
   Mic_Init(&mics[0], &hi2s1, 48000, 24);
 //  Mic_Init(&mics[1], &hi2s2, 48000, 24);
 //  Screen_Send_Command("Hello, %d\n", 123);
-  USB_Send_Command("Hello, %d\n", 123);
+//  USB_Send_Command("Hello, %d\n", 123);
   Mic_Sample_Start(&mics[0]);
 
   /* USER CODE END 2 */
@@ -156,7 +159,23 @@ int main(void)
 //	  Screen_Send_Command("Hello, %d", 123);
 //	  USB_Send_Command("Hello, %d", 1234);
 //	  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-	  HAL_Delay(1000);
+//	  HAL_Delay(1000);
+	  if (mics[0].isDataValid)
+	  {
+		  mics[0].isDataValid = 0;
+		  counter++;
+		  Audio_Get_From_Mic(&mics[0], audio_buffer[0], audio_buffer[1], audio_buffer_mixed);
+		  File_Wav_Write_Data_And_Sync(&wavFile, audio_buffer_mixed, sizeof(audio_buffer_mixed));
+		  if (counter == 1000)
+		  {
+			  HAL_I2S_DMAStop(&hi2s1);
+			  File_Wav_Write_Head_And_Close(&wavFile);
+			  while (1)
+			  {
+				  
+			  }
+		  }
+	  }
   }
   /* USER CODE END 3 */
 }

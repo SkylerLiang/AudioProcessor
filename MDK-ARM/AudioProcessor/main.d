@@ -97,3 +97,5 @@ audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_
 audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 audioprocessor\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
 audioprocessor\main.o: ./MIC/mic.h
+audioprocessor\main.o: ./WAV_FILE/wav_file.h
+audioprocessor\main.o: ./AUDIO_PROCESS/audio_process.h

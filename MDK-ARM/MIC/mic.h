@@ -12,6 +12,8 @@ typedef struct
 {
 	I2S_HandleTypeDef *i2sHandle;
 	raw_data_type_t rawRecvBuffer[RAW_RECV_BUFFER_LEN];
+	raw_data_type_t *validDataPointer;
+	uint8_t isDataValid;
 	uint32_t sampleRate;
 	uint8_t sampleDepth;
 } Mic_Pair_t;

@@ -34,7 +34,6 @@ audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h
 audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h
 audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
-audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h
 audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h
 audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h
 audioprocessor\i2s.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h

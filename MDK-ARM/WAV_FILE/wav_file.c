@@ -15,9 +15,9 @@ void Wav_Head_Init(void)
 	wavHead.fmtSize = 0x10;
 	wavHead.encodeType = 0x01;
 	wavHead.channelsNum = 0x02;
-	wavHead.sampleRate = 48000;
-	wavHead.bytesPerSecond = 192000;
-	wavHead.bitsPerSample = 0x04;
+	wavHead.sampleRate = 22000;
+	wavHead.bytesPerSecond = 88000;
+	wavHead.bytesPerSample = 0x04;
 	wavHead.bitsPerSample = 0x10;
 	
 	wavHead.data = 0x61746164;

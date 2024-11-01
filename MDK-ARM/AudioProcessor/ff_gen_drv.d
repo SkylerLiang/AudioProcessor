@@ -38,7 +38,6 @@ audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i
 audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h
 audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
-audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h
 audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h
 audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h
 audioprocessor\ff_gen_drv.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h

@@ -38,7 +38,6 @@ audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2
 audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h
 audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
-audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h
 audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h
 audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h
 audioprocessor\sd_diskio.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h

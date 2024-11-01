@@ -421,11 +421,6 @@
               <FilePath>../Core/Src/memorymap.c</FilePath>
             </File>
             <File>
-              <FileName>quadspi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/quadspi.c</FilePath>
-            </File>
-            <File>
               <FileName>sdmmc.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/sdmmc.c</FilePath>
@@ -635,11 +630,6 @@
               <FileName>stm32h7xx_hal_i2s_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2s_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32h7xx_hal_qspi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_qspi.c</FilePath>
             </File>
             <File>
               <FileName>stm32h7xx_ll_sdmmc.c</FileName>

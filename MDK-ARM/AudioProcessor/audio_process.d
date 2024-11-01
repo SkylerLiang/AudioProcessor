@@ -34,7 +34,6 @@ audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ha
 audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h
 audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
-audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h
 audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h
 audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h
 audioprocessor\audio_process.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h
@@ -70,3 +69,5 @@ audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM
 audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\dsp/window_functions.h
 audioprocessor\audio_process.o: ./MIC/mic.h
 audioprocessor\audio_process.o: ../Core/Inc/i2s.h
+audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\arm_const_structs.h
+audioprocessor\audio_process.o: C:\Users\SkylerLiang\AppData\Local\Arm\Packs\ARM\CMSIS-DSP\1.16.2\Include\arm_common_tables.h

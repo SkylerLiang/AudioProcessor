@@ -22,7 +22,6 @@
 #include "fatfs.h"
 #include "i2s.h"
 #include "memorymap.h"
-#include "quadspi.h"
 #include "sdmmc.h"
 #include "usart.h"
 #include "usb_device.h"
@@ -58,6 +57,7 @@
 
 /* USER CODE BEGIN PV */
 uint32_t counter = 0;
+float disRec[200] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -106,7 +106,6 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_I2S1_Init();
-  MX_QUADSPI_Init();
   MX_I2S2_Init();
   MX_USB_DEVICE_Init();
   MX_USART1_UART_Init();
@@ -115,37 +114,15 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
   HAL_Delay(5000);
-  File_Init();
-  File_Wav_Create(&wavFile, 1001);
+//  File_Init();
+//  File_Wav_Create(&wavFile, 99);
 //  USB_Send_Command("FatFS init %s\n", (res == FR_OK ? "success" : "failed"));
   
-//  if (res == FR_NO_FILESYSTEM)
-//  {
-//	  BYTE workBuffer[4096 * 2];
-//	  res = f_mkfs("0:", FM_EXFAT, 0, workBuffer, 4096 * 2);
-	  
-//  }
-  
-//  if (res == FR_OK)
-//  {
-//	  FIL file;
-//	  res = f_open(&file, "test1.txt", FA_CREATE_NEW | FA_WRITE);
-//	  if (res == FR_OK)
-//	  {
-//		  UINT bw = 0;
-//		  char str[] = "Hello, world!\n";
-//		  f_write(&file, str, strlen(str), &bw);
-//		  f_close(&file);
-//	  }
-//  }
-  
   Screen_Init();
-  Mic_Init(&mics[0], &hi2s1, 48000, 24);
-//  Mic_Init(&mics[1], &hi2s2, 48000, 24);
-//  Screen_Send_Command("Hello, %d\n", 123);
-//  USB_Send_Command("Hello, %d\n", 123);
+  Mic_Init(&mics[0], &hi2s1, 22000, 24);
+  USB_Send_Command("System init success!\n");
   Mic_Sample_Start(&mics[0]);
-
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -155,21 +132,17 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	  float cos = arm_cos_f32(3.14);
-//	  Screen_Send_Command("Hello, %d", 123);
-//	  USB_Send_Command("Hello, %d", 1234);
-//	  HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-//	  HAL_Delay(1000);
 	  if (mics[0].isDataValid)
 	  {
 		  mics[0].isDataValid = 0;
-		  counter++;
 		  Audio_Get_From_Mic(&mics[0], audio_buffer[0], audio_buffer[1], audio_buffer_mixed);
-		  File_Wav_Write_Data_And_Sync(&wavFile, audio_buffer_mixed, sizeof(audio_buffer_mixed));
-		  if (counter == 500)
+		  disRec[counter] = Audio_Calc_Distance(audio_buffer[0], audio_buffer[1]);
+//		  File_Wav_Write_Data_And_Sync(&wavFile, audio_buffer_mixed, sizeof(audio_buffer_mixed));
+		  counter++;
+		  if (counter == 100)
 		  {
 			  HAL_I2S_DMAStop(&hi2s1);
-			  File_Wav_Write_Head_And_Close(&wavFile);
+//			  File_Wav_Write_Head_And_Close(&wavFile);
 			  while (1)
 			  {
 				  

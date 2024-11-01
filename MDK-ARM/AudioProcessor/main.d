@@ -33,7 +33,6 @@ audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2s.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
-audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_qspi.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sd.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_sdmmc.h
 audioprocessor\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_delayblock.h
@@ -55,7 +54,6 @@ audioprocessor\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 audioprocessor\main.o: ../FATFS/Target/sd_diskio.h
 audioprocessor\main.o: ../Core/Inc/i2s.h
 audioprocessor\main.o: ../Core/Inc/memorymap.h
-audioprocessor\main.o: ../Core/Inc/quadspi.h
 audioprocessor\main.o: ../Core/Inc/sdmmc.h
 audioprocessor\main.o: ../Core/Inc/usart.h
 audioprocessor\main.o: ../USB_DEVICE/App/usb_device.h

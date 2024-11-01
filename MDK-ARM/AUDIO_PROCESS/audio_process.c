@@ -7,6 +7,7 @@ float32_t Ak[2048] = {0}, Bk[2048] = {0};
 float32_t temp[2048] = {0};
 float32_t mags[1024] = {0};
 float32_t corrBuffer[1024] = {0};
+float32_t phi[1024] = {0};
 int16_t adad[1024];
 
 void Audio_Get_From_Mic(Mic_Pair_t *pMics, int16_t *bufferL, int16_t *bufferR, int16_t *bufferM)
@@ -71,16 +72,21 @@ void Audio_Correlate(int16_t *inA, int16_t *inB, float *out)
 	// mult
 	arm_cmplx_mult_cmplx_f32(Ak, Bk, temp, 1024);
 	
-	// IFFT
-	arm_cfft_f32(cfft_instance, temp, 0, 1);
-	
 	// mag
 	arm_cmplx_mag_f32(temp, mags, 1024);
 	
 	for(uint16_t i = 0; i < 1024; i++)
 	{
+		temp[2 * i] /= mags[i];
+		temp[2 * i + 1] /= mags[i];
+	}
+	
+	// IFFT
+	arm_cfft_f32(cfft_instance, temp, 0, 1);
+	
+	for(uint16_t i = 0; i < 1024; i++)
+	{
 		out[i] = (float)temp[i * 2];
-//		out[i] = (int16_t)mags[i];
 	}
 	
 //	arm_correlate_q15(inA, 512, inB, 512, adad);

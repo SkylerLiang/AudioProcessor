@@ -193,12 +193,7 @@
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>disRec</ItemText>
-        </Ww>
-        <Ww>
-          <count>7</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>corrBuffer</ItemText>
+          <ItemText>audio_buffer[0],0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>

@@ -136,9 +136,9 @@ int main(void)
 	  {
 		  mics[0].isDataValid = 0;
 		  Audio_Get_From_Mic(&mics[0], audio_buffer[0], audio_buffer[1], audio_buffer_mixed);
-		  disRec[counter] = Audio_Calc_Distance(audio_buffer[0], audio_buffer[1]);
+//		  disRec[counter] = Audio_Calc_Distance(audio_buffer[0], audio_buffer[1]);
 //		  File_Wav_Write_Data_And_Sync(&wavFile, audio_buffer_mixed, sizeof(audio_buffer_mixed));
-		  counter++;
+//		  counter++;
 		  if (counter == 100)
 		  {
 			  HAL_I2S_DMAStop(&hi2s1);
@@ -188,7 +188,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 15;
+  RCC_OscInitStruct.PLL.PLLQ = 60;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
@@ -215,6 +215,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  __HAL_RCC_PLLCLKOUT_ENABLE(RCC_PLL1_DIVQ);
+  HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_PLL1QCLK, RCC_MCODIV_8);
 }
 
 /* USER CODE BEGIN 4 */

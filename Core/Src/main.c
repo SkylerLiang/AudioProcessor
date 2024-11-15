@@ -57,7 +57,7 @@
 
 /* USER CODE BEGIN PV */
 uint32_t counter = 0;
-float disRec[200] = {0};
+float disRec[600] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,8 +114,8 @@ int main(void)
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
   HAL_Delay(5000);
-//  File_Init();
-//  File_Wav_Create(&wavFile, 99);
+  File_Init();
+  File_Wav_Create(&wavFile, 1240);
 //  USB_Send_Command("FatFS init %s\n", (res == FR_OK ? "success" : "failed"));
   
   Screen_Init();
@@ -136,13 +136,13 @@ int main(void)
 	  {
 		  mics[0].isDataValid = 0;
 		  Audio_Get_From_Mic(&mics[0], audio_buffer[0], audio_buffer[1], audio_buffer_mixed);
-//		  disRec[counter] = Audio_Calc_Distance(audio_buffer[0], audio_buffer[1]);
-//		  File_Wav_Write_Data_And_Sync(&wavFile, audio_buffer_mixed, sizeof(audio_buffer_mixed));
-//		  counter++;
-		  if (counter == 100)
+		  disRec[counter] = Audio_Calc_Distance(audio_buffer[0], audio_buffer[1]);
+		  File_Wav_Write_Data_And_Sync(&wavFile, audio_buffer_mixed, sizeof(audio_buffer_mixed));
+		  counter++;
+		  if (counter == 500)
 		  {
 			  HAL_I2S_DMAStop(&hi2s1);
-//			  File_Wav_Write_Head_And_Close(&wavFile);
+			  File_Wav_Write_Head_And_Close(&wavFile);
 			  while (1)
 			  {
 				  

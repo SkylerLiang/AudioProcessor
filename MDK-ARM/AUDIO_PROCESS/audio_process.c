@@ -12,7 +12,7 @@ int16_t adad[1024];
 
 void Audio_Get_From_Mic(Mic_Pair_t *pMics, int16_t *bufferL, int16_t *bufferR, int16_t *bufferM)
 {
-	int16_t temp[2];
+	int16_t value[2];
 	uint8_t *pointer;
 	uint32_t *bufferPointer = pMics->validDataPointer;
 	for(uint16_t i = 0; i < 512; i++)
@@ -24,16 +24,16 @@ void Audio_Get_From_Mic(Mic_Pair_t *pMics, int16_t *bufferL, int16_t *bufferR, i
 	
 		pointer = (uint8_t *)&bufferPointer[i * 2];
 		
-		memcpy(&temp[0], pointer + 1, 2);
-		memcpy(&temp[1], pointer + 5, 2);
+		memcpy(&value[0], pointer + 1, 2);
+		memcpy(&value[1], pointer + 5, 2);
 		
 		// process
-//		temp[0] *= 5;
-//		temp[1] *= 5;
+		value[0] *= 20;
+		value[1] *= 20;
 		
-		memcpy(&bufferL[i], &temp[0], 2);
-		memcpy(&bufferR[i], &temp[1], 2);
-		memcpy(&bufferM[i * 2], temp, 4);
+		memcpy(&bufferL[i], &value[0], 2);
+		memcpy(&bufferR[i], &value[1], 2);
+		memcpy(&bufferM[i * 2], value, 4);
 		
 		/********** test **********/
 //		int16_t sin = (int16_t)(20000 * arm_sin_f32(i * 2 * M_PI / 64));
@@ -73,13 +73,13 @@ void Audio_Correlate(int16_t *inA, int16_t *inB, float *out)
 	arm_cmplx_mult_cmplx_f32(Ak, Bk, temp, 1024);
 	
 	// mag
-	arm_cmplx_mag_f32(temp, mags, 1024);
-	
-	for(uint16_t i = 0; i < 1024; i++)
-	{
-		temp[2 * i] /= mags[i];
-		temp[2 * i + 1] /= mags[i];
-	}
+//	arm_cmplx_mag_f32(temp, mags, 1024);
+//	
+//	for(uint16_t i = 0; i < 1024; i++)
+//	{
+//		temp[2 * i] /= mags[i];
+//		temp[2 * i + 1] /= mags[i];
+//	}
 	
 	// IFFT
 	arm_cfft_f32(cfft_instance, temp, 0, 1);
@@ -110,10 +110,10 @@ float Audio_Calc_Distance(int16_t *audioL, int16_t *audioR)
 	// 1 / 22000 * 340
 	if (idx < 512)
 	{
-		return - 15.454545f * (int)idx;
+		return - 21.25f * (int)idx;
 	}
 	else
 	{
-		return 15.454545f * (1023 - idx);
+		return 21.25f * (1023 - idx);
 	}
 }
